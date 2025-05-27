@@ -1,0 +1,43 @@
+name: "🐛 Bug Report"
+description: "Report a problem or unexpected behavior"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the form below.
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "e.g. OS, Browser, Python version"
+      placeholder: "Windows 11, Chrome 123, Python 3.10"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "What steps led to the bug?"
+      placeholder: "1. Go to...\n2. Click on...\n3. See error..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected Behavior"
+      description: "What should have happened instead?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / Screenshots"
+      description: "Attach logs or screenshots if helpful"
+    validations:
+      required: false

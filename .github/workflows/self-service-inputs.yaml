@@ -1,0 +1,33 @@
+name: Self-Service Input Form
+
+on:
+  workflow_dispatch:
+    inputs:
+      model_version:
+        description: 'Model version (e.g., v1.0)'
+        required: true
+        default: 'latest'
+      environment:
+        description: 'Environment'
+        required: true
+        type: choice
+        options: [dev, staging, production]
+        default: dev
+      replicas:
+        description: 'Number of replicas'
+        required: false
+        default: '1'
+      confidence_threshold:
+        description: 'Confidence threshold'
+        required: false
+        default: '0.85'
+
+jobs:
+  log-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Model Version: ${{ github.event.inputs.model_version }}"
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Replicas: ${{ github.event.inputs.replicas }}"
+          echo "Confidence: ${{ github.event.inputs.confidence_threshold }}"

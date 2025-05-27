@@ -1,26 +1,21 @@
 name: "✨ Feature Request"
-description: "Suggest a new idea or feature"
+description: "Request a new feature or improvement"
 title: "[Feature]: "
 labels: ["enhancement"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Got an idea? Tell us about it!
-
   - type: input
     id: summary
     attributes:
-      label: "Feature Summary"
-      placeholder: "e.g. Add dark mode to the dashboard"
+      label: "Short Summary"
+      placeholder: "e.g. Add export to PDF button"
     validations:
       required: true
 
   - type: textarea
-    id: details
+    id: context
     attributes:
       label: "Describe the Feature"
-      description: "Provide context, why it's useful, and how it should work"
+      description: "Why is this feature needed? How should it work?"
     validations:
       required: true
 
@@ -32,4 +27,3 @@ body:
         - Low
         - Medium
         - High
-      default: 1

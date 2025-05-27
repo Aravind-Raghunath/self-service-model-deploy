@@ -1,0 +1,35 @@
+name: "✨ Feature Request"
+description: "Suggest a new idea or feature"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea? Tell us about it!
+
+  - type: input
+    id: summary
+    attributes:
+      label: "Feature Summary"
+      placeholder: "e.g. Add dark mode to the dashboard"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "Describe the Feature"
+      description: "Provide context, why it's useful, and how it should work"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - Low
+        - Medium
+        - High
+      default: 1
